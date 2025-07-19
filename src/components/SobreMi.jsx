@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import { User, Briefcase, BookOpen, Mail, MapPin } from 'lucide-react';
 import { Navbar } from './Navbar';
+import { Footer } from './Footer';
 
 export const SobreMi = () => {
   return (
-    <div className="min-h-screen bg-[#F4F4F6] py-3 px-6">
+    <div className="min-h-screen bg-[#F4F4F6]">
         <Navbar />
       <div className="max-w-6xl m-10 mx-auto">
         {/* Header */}
@@ -31,7 +32,7 @@ export const SobreMi = () => {
               {/* Espacio para tu foto - Reemplaza el div por tu imagen */}
               <div className="w-full h-full bg-[#9999A1] flex items-center justify-center">
                 <User className="w-32 h-32 text-[#E6E6E9]" />
-                <p className="absolute text-sm text-[#E6E6E9] bottom-4">Tu foto aquí</p>
+                <img src="../../public/foto.jpeg" alt="Tu nombre" />
               </div>
               {/* Ejemplo de cómo sería con tu imagen:
                 <img 
@@ -55,7 +56,7 @@ export const SobreMi = () => {
             </h2>
             
             <p className="text-lg text-[#66666E] mb-8 leading-relaxed">
-              [Breve introducción sobre ti. Ejemplo: "Soy un desarrollador full-stack con 5 años de experiencia especializado en tecnologías Java y JavaScript. Apasionado por crear soluciones tecnológicas eficientes y escalables que resuelvan problemas reales."]
+              Soy un estudiante de último año de Perito en Informática con una fuerte orientación hacia el desarrollo de software. Apasionado por la programación full-stack y las tecnologías web como Node.js, React y MongoDB. Me esfuerzo por construir soluciones funcionales, modernas y bien estructuradas, con un enfoque especial en proyectos académicos, sociales y prácticos. Aspiro a ingresar a la Universidad  para continuar mi formación en Ingeniería en Ciencia de la Computación y especializarme en Inteligencia Artificial o algún otra especialización. Busco crecer profesionalmente, combinando el estudio con experiencia laboral desde los primeros años universitarios.
             </p>
 
             {/* Personal Info */}
@@ -102,6 +103,7 @@ export const SobreMi = () => {
           </div>
         </motion.div>
       </div>
+      <Footer />
     </div>
   );
 };

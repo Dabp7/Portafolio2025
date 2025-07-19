@@ -23,7 +23,7 @@ export const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#F4F4F6] flex flex-col py-3">
+    <div className="min-h-screen bg-[#F4F4F6] flex flex-col">
       <Navbar />
 
       <main className="flex-1 flex items-center justify-center px-6 py-12">

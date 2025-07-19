@@ -17,23 +17,24 @@ import {
   DiNpm
 } from 'react-icons/di';
 import { Navbar } from './Navbar';
+import { Footer } from './Footer';
 
 const skills = [
-  { name: 'Java', icon: <DiJava size={40} />, level: 90 },
-  { name: 'Java EE', icon: <DiJava size={40} />, level: 85 },
-  { name: 'JavaScript', icon: <SiJavascript size={40} />, level: 95 },
-  { name: 'Springboot', icon: <SiSpringboot size={40} />, level: 88 },
-  { name: 'React', icon: <SiReact size={40} />, level: 92 },
-  { name: 'Node.js', icon: <SiNodedotjs size={40} />, level: 87 },
-  { name: 'MySQL', icon: <SiMysql size={40} />, level: 83 },
+  { name: 'Java', icon: <DiJava size={40} />, level: 80 },
+  { name: 'Java EE', icon: <DiJava size={40} />, level: 80 },
+  { name: 'JavaScript', icon: <SiJavascript size={40} />, level: 90 },
+  { name: 'Springboot', icon: <SiSpringboot size={40} />, level: 75 },
+  { name: 'React', icon: <SiReact size={40} />, level: 90 },
+  { name: 'Node.js', icon: <SiNodedotjs size={40} />, level: 85 },
+  { name: 'MySQL', icon: <SiMysql size={40} />, level: 75 },
   { name: 'MongoDB', icon: <SiMongodb size={40} />, level: 80 },
-  { name: 'HTML5', icon: <SiHtml5 size={40} />, level: 98 },
-  { name: 'CSS3', icon: <SiCss3 size={40} />, level: 95 },
-  { name: 'Git', icon: <SiGit size={40} />, level: 90 },
-  { name: 'GitHub', icon: <SiGithub size={40} />, level: 88 },
-  { name: 'CCNA v7', icon: <SiCisco size={40} />, level: 75 },
-  { name: 'Cisco', icon: <SiCisco size={40} />, level: 78 },
-  { name: 'Npm', icon: <DiNpm size={40} />, level: 100 }
+  { name: 'HTML5', icon: <SiHtml5 size={40} />, level: 95 },
+  { name: 'CSS3', icon: <SiCss3 size={40} />, level: 90 },
+  { name: 'Git', icon: <SiGit size={40} />, level: 80 },
+  { name: 'GitHub', icon: <SiGithub size={40} />, level: 80 },
+  { name: 'CCNA v7', icon: <SiCisco size={40} />, level: 65 },
+  { name: 'Cisco', icon: <SiCisco size={40} />, level: 70 },
+  { name: 'Npm', icon: <DiNpm size={40} />, level: 90 }
 ];
 
 const skillList = [
@@ -105,8 +106,7 @@ export const Habilidades = () => {
   return (
     <div className="min-h-screen bg-[#F4F4F6]">
       <Navbar />
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        {/* Header Tecnologías */}
+      <div className="max-w-7xl mx-auto m-11">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -119,7 +119,6 @@ export const Habilidades = () => {
           </p>
         </motion.div>
 
-        {/* Skills Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mb-24">
           {skills.map((skill, index) => (
             <motion.div
@@ -201,6 +200,7 @@ export const Habilidades = () => {
           </div>
         </motion.div>
       </div>
+      <Footer />
     </div>
   );
 };

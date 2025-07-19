@@ -27,7 +27,7 @@ export const Footer = () => {
             <div className="flex flex-wrap gap-4">
               <motion.a
                 whileHover={{ y: -2 }}
-                href="https://github.com/tu-usuario" 
+                href="https://github.com/Dabp7" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-[#E6E6E9] hover:text-[#F4F4F6] transition-colors text-sm"

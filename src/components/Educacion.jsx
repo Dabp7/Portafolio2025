@@ -15,44 +15,51 @@ export const Educacion = () => {
     preprimaria: [
       {
         id: 1,
-        schoolName: "Jardín Infantil [Nombre]",
-        years: "2005 - 2007",
+        schoolName: "Escuela de párvulos No. 14 Vicenta Laparra de la Cerda",
+        years: "2012",
         description: "Primera etapa educativa donde desarrollé mis habilidades sociales y cognitivas básicas.",
-        image: "../../public/logo.png" 
+        image: "../../public/preprimaria.jpg" 
       }
     ],
     primaria: [
       {
         id: 1,
-        schoolName: "Colegio Primario [Nombre]",
-        years: "2008 - 2011",
+        schoolName: "Premaria - Colegio Maria Concepción",
+        years: "2013",
         description: "Educación primaria donde adquirí las bases de matemáticas, lenguaje y ciencias.",
-        image: "/placeholder-school.jpg"
+        image: "../../public/concepcion.jpeg"
       },
       {
         id: 2,
-        schoolName: "Colegio Primario [Nombre]",
-        years: "2012 - 2013",
+        schoolName: "Primaria - Colegio Maria Concepción",
+        years: "2014 - 2018",
         description: "Continuación de educación primaria con enfoque en pensamiento crítico.",
-        image: "/placeholder-school.jpg"
+        image: "../../public/concepcion.jpeg"
+      },
+      {
+        id: 3,
+        schoolName: "Escuela Rafaela Del Aguila",
+        years: "2019",
+        description: "Educación primaria donde adquirí las bases de matemáticas, lenguaje y ciencias.",
+        image: "../../public/rafaela.jpg"
       }
     ],
     basicos: [
       {
         id: 1,
-        schoolName: "Instituto Básico [Nombre]",
-        years: "2014 - 2016",
+        schoolName: "Centro Educativo Técnico Laboral Kinal",
+        years: "2020-2022",
         description: "Ciclo de educación básica con especialización en [área específica].",
-        image: "/placeholder-school.jpg"
+        image: "../../public/kinal.jpg"
       }
     ],
     diversificado: [
       {
         id: 1,
-        schoolName: "Instituto Diversificado [Nombre]",
-        years: "2017 - 2018",
+        schoolName: "Centro Educativo Técnico Laboral Kinal",
+        years: "2023-2025",
         description: "Educación diversificada con orientación en [especialidad técnica o bachillerato].",
-        image: "/placeholder-school.jpg"
+        image: "../../public/kinal.jpg"
       }
     ]
   };
@@ -101,14 +108,13 @@ export const Educacion = () => {
               {school.years}
             </span>
           </div>
-          <p className="text-[#66666E]">{school.description}</p>
         </div>
       </div>
     </motion.div>
   );
 
   return (
-    <div className="min-h-screen bg-[#F4F4F6] py-3 px-6">
+    <div className="min-h-screen bg-[#F4F4F6]">
         <Navbar />
       <div className="max-w-4xl my-11 mx-auto">
         {/* Header */}
@@ -127,7 +133,7 @@ export const Educacion = () => {
           {/* Preprimaria */}
           <div className="bg-white rounded-xl shadow-sm overflow-hidden">
             <SectionHeader
-              title="Preprimaria"
+              title="Parvulos"
               icon={<School size={20} />}
               isOpen={expandedSection === 'preprimaria'}
               onClick={() => toggleSection('preprimaria')}
