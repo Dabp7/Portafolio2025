@@ -207,3 +207,8 @@ Guardar en `docs/evidence/` el comando ejecutado, resultado, fecha y commit. Dis
 ## Entrega final
 
 Otra persona puede clonar el repositorio, configurar el ejemplo, iniciar la demo y ejecutar las pruebas con las instrucciones del README. Los errores explican qué pasó y qué hacer. La ejecución no depende de un servicio de la empresa ni de recursos privados.
+
+
+## Resultado de implementación · 27 de noviembre de 2026
+
+Implementado en https://github.com/Dabp7/pos-sandbox. Prueba en Android API36 de persistencia SQLite offline, cierre forzado y sincronización sin duplicar; pagos e impresora simulados.

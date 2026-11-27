@@ -28,3 +28,8 @@ La API no permite comprar inventario inexistente ni leer compras ajenas; la demo
 ## Entrega en GitHub
 
 Trabajar en una rama, comprobar los cambios y abrir un PR con comandos ejecutados y resultados. Mantener el propósito académico del proyecto; añadir evidencia técnica antes de multiplicar funcionalidades. En el portafolio describir solo lo que esté implementado.
+
+
+## Resultado de implementación · 27 de noviembre de 2026
+
+Implementado en https://github.com/Dabp7/ventasOnline_LabFinal. Diez pruebas MongoDB, compra concurrente, permisos y seed; integrado en master.

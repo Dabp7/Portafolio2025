@@ -49,3 +49,8 @@ El sitio actual de Firebase y GitHub no deben sustituirse por una copia no revis
 ## Entregables
 
 Código editable del rediseño, bundle estático, CV, configuración de hosting, instrucciones de ejecución y cambios resumidos. El plan del portafolio corresponde al código entregado; los planes de DocumentFlow, ReconcileLab y POS Sandbox son trabajo futuro.
+
+
+## Resultado de implementación · 27 de noviembre de 2026
+
+Portafolio2025 está implementado en https://github.com/Dabp7/Portafolio2025. Cinco casos públicos, capturas y pruebas Playwright escritorio/móvil; evidencia en docs/evidence/2026-11-27-proyectos.md.

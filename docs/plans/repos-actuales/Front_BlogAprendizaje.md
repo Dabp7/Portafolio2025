@@ -28,3 +28,8 @@ Con API detenida el usuario entiende el error; con API activa puede completar el
 ## Entrega en GitHub
 
 Trabajar en una rama, comprobar los cambios y abrir un PR con comandos ejecutados y resultados. Mantener el propósito académico del proyecto; añadir evidencia técnica antes de multiplicar funcionalidades. En el portafolio describir solo lo que esté implementado.
+
+
+## Resultado de implementación · 27 de noviembre de 2026
+
+Implementado en https://github.com/Dabp7/Front_BlogAprendizaje. Lint, build y cinco recorridos Playwright; integrado en master.

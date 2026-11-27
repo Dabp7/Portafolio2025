@@ -28,3 +28,8 @@ Una persona ejecuta la aplicación y las pruebas sin depender del equipo origina
 ## Entrega en GitHub
 
 Trabajar en una rama, comprobar los cambios y abrir un PR con comandos ejecutados y resultados. Mantener el propósito académico del proyecto; añadir evidencia técnica antes de multiplicar funcionalidades. En el portafolio describir solo lo que esté implementado.
+
+
+## Resultado de implementación · 27 de noviembre de 2026
+
+Implementado en https://github.com/Dabp7/IN5BM_SuperKinal. Veinticuatro pruebas, seed sintético MySQL, migración, JAR, capturas y video; integrado en master.
