@@ -28,3 +28,8 @@ El frontend puede conectarse usando la guía y la API rechaza contenido inválid
 ## Entrega en GitHub
 
 Trabajar en una rama, comprobar los cambios y abrir un PR con comandos ejecutados y resultados. Mantener el propósito académico del proyecto; añadir evidencia técnica antes de multiplicar funcionalidades. En el portafolio describir solo lo que esté implementado.
+
+
+## Resultado de implementación · 27 de noviembre de 2026
+
+Implementado en https://github.com/Dabp7/Back_BlogAprendizaje. Diez pruebas MongoDB y demo reproducible; integrado en master.

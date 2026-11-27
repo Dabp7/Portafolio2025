@@ -23,7 +23,7 @@ No iniciar los tres proyectos grandes al mismo tiempo. Cada fase se cierra con u
 
 Convertir su resultado en una issue. Escribir una SPEC con objetivo, alcance, casos de error y criterios de aceptación. Implementar un corte pequeño, probarlo y adjuntar evidencia. Si la fase no se puede demostrar desde un clon limpio, corregir la instalación y la guía antes de ampliar el producto.
 
-Los comandos y endpoints de los tres planes nuevos son contratos propuestos para construir; sus aplicaciones todavía no fueron implementadas. El rediseño del portafolio sí se entrega como código.
+Los tres planes nuevos y las mejoras de los nueve repositorios existentes están implementados. La evidencia, pruebas y enlaces están en la entrega consolidada del portafolio.
 
 ## Identidad y publicación
 
@@ -38,3 +38,24 @@ Cuenta personal: `Dabp7`. Cuenta laboral: `diegodigifact`. Verificar la identida
 - [Expo SQLite](https://docs.expo.dev/versions/latest/sdk/sqlite/).
 
 Fecha de preparación: 23 de noviembre de 2026. Antes de crear un scaffold, revisar compatibilidad y soporte y fijar versiones en sus archivos de configuración.
+
+## Entrega implementada · 27 de noviembre de 2026
+
+Se completaron los tres proyectos nuevos y las mejoras aprobadas para los nueve repositorios existentes. Las doce entregas tienen README, evidencia reproducible, pruebas y GitHub Actions. AWS se dejó para una etapa posterior, sin abrir cuenta ni crear recursos. El resumen, enlaces y limitaciones están en el portafolio actualizado: https://github.com/Dabp7/Portafolio2025/blob/main/docs/ENTREGA.md
+
+| Proyecto | Resultado |
+|---|---|
+| Portafolio2025 | Cinco casos públicos, enlaces reales, capturas y Playwright escritorio/móvil; PR #2 integrado en main. |
+| IN5BM_SuperKinal | Demo sintética, 24 pruebas, migración/JAR, capturas JavaFX y video; integrado en master. |
+| ventasOnline_LabFinal | Compras concurrentes y permisos, 10 pruebas MongoDB, seed y arranque reales; integrado en master. |
+| DocumentFlow | Exportación durable y ZIP/PDF, recuperación e idempotencia; 16 pruebas y Compose. |
+| ReconcileLab | Conciliación con proveedor simulado, outbox y workers; verificación .NET/PostgreSQL. |
+| POS Sandbox | SQLite offline, sincronización idempotente y pagos/periféricos simulados; prueba Android API36. |
+| Back_BlogAprendizaje | Contrato de comentarios, seed y 10 pruebas MongoDB; integrado en master. |
+| Front_BlogAprendizaje | Lectura y comentarios, cinco recorridos Playwright; integrado en master. |
+| Gestion_Coperex | Permisos, exportación filtrada y cinco pruebas MongoDB; integrado en master. |
+| Gestion_Estudiantes_2020527 | Propiedad, concurrencia y nueve pruebas MongoDB; integrado en master. |
+| Gestion_Opiniones_2025 | Autoría, categorías, comentarios y ocho pruebas MongoDB; integrado en master. |
+| Laboratorio_2 | Reservas concurrentes, roles y nueve pruebas MongoDB; integrado en master. |
+
+Las demos usan datos sintéticos. POS simula pagos e impresora y no se publicó en tienda. Firebase no se desplegó desde esta tarea.
