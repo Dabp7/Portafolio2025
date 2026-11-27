@@ -8,6 +8,10 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+build
+.firebase
+.sites-runtime
+.sites-checkout
 dist
 dist-ssr
 *.local
