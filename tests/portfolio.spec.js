@@ -1,0 +1,37 @@
+import { test, expect } from '@playwright/test'
+
+test('projects can be filtered and cases close with keyboard and restore focus', async ({ page }) => {
+  const errors = []
+  page.on('pageerror', error => errors.push(error.message))
+  await page.goto('/')
+  await expect(page.locator('.project-card')).toHaveCount(2)
+  const open = page.getByRole('button', { name: 'Ver caso de SuperKinal' })
+  await open.click()
+  await expect(page.getByRole('dialog')).toBeVisible()
+  await page.keyboard.press('Escape')
+  await expect(page.getByRole('dialog')).toHaveCount(0)
+  await expect(open).toBeFocused()
+  await page.getByRole('button', { name: 'Lo que sigue', exact: true }).click()
+  await expect(page.locator('.project-card')).toHaveCount(3)
+  await page.getByRole('button', { name: 'Ver caso de DocumentFlow' }).click()
+  await expect(page.getByRole('dialog').getByRole('link', { name: 'Explorar repositorio' })).toHaveCount(0)
+  await page.keyboard.press('Escape')
+  await page.getByRole('button', { name: 'Todos', exact: true }).click()
+  await expect(page.locator('.project-card')).toHaveCount(5)
+  expect(errors).toEqual([])
+})
+
+test('navigation, CV, contact and viewport fit', async ({ page, isMobile }) => {
+  await page.goto('/')
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true)
+  if (isMobile) await page.getByRole('button', { name: 'Abrir menú' }).click()
+  await page.getByRole('navigation').getByRole('link', { name: 'Contacto', exact: true }).click()
+  await expect(page).toHaveURL(/#contacto$/)
+  if (isMobile) await expect(page.getByRole('button', { name: 'Abrir menú' })).toHaveAttribute('aria-expanded', 'false')
+  await expect(page.getByRole('link', { name: 'Escribime', exact: true })).toHaveAttribute('href', 'mailto:dabercianperez@gmail.com')
+  const pdf = await page.request.get('/Diego-Bercian-CV.pdf')
+  expect(pdf.ok()).toBe(true)
+  expect((await pdf.body()).subarray(0, 5).toString()).toBe('%PDF-')
+  await page.goto('/habilidades')
+  await expect(page).toHaveURL(/#enfoque$/)
+})

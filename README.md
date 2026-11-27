@@ -16,6 +16,9 @@ npm run dev
 ```sh
 npm run build
 npm run verify:dist
+npm run lint
+npx playwright install chromium
+npm run test:e2e
 npm run preview
 ```
 

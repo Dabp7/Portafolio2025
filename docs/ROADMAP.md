@@ -12,7 +12,7 @@ Fecha: 2026-11-26. Cuenta personal comprobada: Dabp7.
 
 ## Orden de ejecución
 
-- [ ] Portafolio2025: incorporar rediseño, revisar CV, navegación móvil, filtros, modales y build.
+- [x] Portafolio2025: incorporar rediseño, verificar PDF, navegación móvil, filtros, modales y build. Evidencia: docs/evidence/2026-11-26.md. Los datos biográficos se conservan del contenido entregado.
 - [ ] IN5BM_SuperKinal: demo reproducible con datos ficticios, instalación y pruebas.
 - [ ] ventasOnline_LabFinal: reglas de inventario concurrente, permisos y demo.
 - [ ] DocumentFlow: API y seed, exportación local completa, idempotencia, workers, streaming, fallos y entrega.
