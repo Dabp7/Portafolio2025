@@ -1,27 +1,32 @@
 import { test, expect } from '@playwright/test'
 
-test('projects can be filtered and cases close with keyboard and restore focus', async ({ page }) => {
+test('projects can be filtered and cases close with keyboard and restore focus', async ({ page }, testInfo) => {
   const errors = []
   page.on('pageerror', error => errors.push(error.message))
   await page.goto('/')
-  await expect(page.locator('.project-card')).toHaveCount(2)
+  await expect(page.locator('.project-card')).toHaveCount(5)
   const open = page.getByRole('button', { name: 'Ver caso de SuperKinal' })
   await open.click()
   await expect(page.getByRole('dialog')).toBeVisible()
   await page.keyboard.press('Escape')
   await expect(page.getByRole('dialog')).toHaveCount(0)
   await expect(open).toBeFocused()
+  for (const [name, url] of [['DocumentFlow', 'documentflow'], ['ReconcileLab', 'reconcilelab'], ['POS Sandbox', 'pos-sandbox']]) {
+    await page.getByRole('button', { name: 'Ver caso de ' + name }).click()
+    await expect(page.getByRole('dialog').getByRole('link', { name: 'Explorar repositorio' })).toHaveAttribute('href', 'https://github.com/Dabp7/' + url)
+    await page.keyboard.press('Escape')
+  }
   await page.getByRole('button', { name: 'Lo que sigue', exact: true }).click()
-  await expect(page.locator('.project-card')).toHaveCount(3)
-  await page.getByRole('button', { name: 'Ver caso de DocumentFlow' }).click()
-  await expect(page.getByRole('dialog').getByRole('link', { name: 'Explorar repositorio' })).toHaveCount(0)
-  await page.keyboard.press('Escape')
+  await expect(page.locator('.project-card')).toHaveCount(0)
+  await expect(page.getByText('No hay proyectos en esta categoría. Podés explorar los publicados.')).toBeVisible()
   await page.getByRole('button', { name: 'Todos', exact: true }).click()
   await expect(page.locator('.project-card')).toHaveCount(5)
+  await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }))
+  await page.screenshot({ path: 'test-results/portfolio-' + testInfo.project.name + '.png', fullPage: true })
   expect(errors).toEqual([])
 })
 
-test('navigation, CV, contact and viewport fit', async ({ page, isMobile }) => {
+test('navigation, CV, contact and viewport fit', async ({ page, isMobile, context }) => {
   await page.goto('/')
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true)
   if (isMobile) await page.getByRole('button', { name: 'Abrir menú' }).click()
@@ -29,6 +34,13 @@ test('navigation, CV, contact and viewport fit', async ({ page, isMobile }) => {
   await expect(page).toHaveURL(/#contacto$/)
   if (isMobile) await expect(page.getByRole('button', { name: 'Abrir menú' })).toHaveAttribute('aria-expanded', 'false')
   await expect(page.getByRole('link', { name: 'Escribime', exact: true })).toHaveAttribute('href', 'mailto:dabercianperez@gmail.com')
+  await context.grantPermissions(['clipboard-read', 'clipboard-write'])
+  await page.getByRole('button', { name: 'Copiar correo', exact: true }).click()
+  await expect(page.getByRole('button', { name: 'Correo copiado', exact: true })).toBeVisible()
+  expect(await page.evaluate(() => navigator.clipboard.readText())).toBe('dabercianperez@gmail.com')
+  const downloadPromise = page.waitForEvent('download')
+  await page.getByRole('link', { name: 'Descargar experiencia completa' }).click()
+  expect((await downloadPromise).suggestedFilename()).toBe('Diego-Bercian-CV.pdf')
   const pdf = await page.request.get('/Diego-Bercian-CV.pdf')
   expect(pdf.ok()).toBe(true)
   expect((await pdf.body()).subarray(0, 5).toString()).toBe('%PDF-')

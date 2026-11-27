@@ -5,3 +5,7 @@
 
 /* Readable product text; miniature illustrations retain their own scale. */
 .tags span,.hero-footnote,.tech-list,.navigation,.filter{font-size:14px}.experience-list p,.capability p,.section-description,.about-copy>p,.contact-section p{font-size:16px}.panel-description p,.panel-description b{font-size:14px}.panel-description{min-height:130px}.panel-code pre{font-size:13px}.project-info p{font-size:16px}.ai-process p,.ai-block p{font-size:15px}.role-block span,.education-row span,.copy-feedback{font-size:13px}.hero-footnote{flex-wrap:wrap}.hero-footnote span:not(:last-child):after{margin-left:12px}.contact-buttons{flex-wrap:wrap}@media(max-width:600px){.hero h1{font-size:clamp(39px,11.6vw,49px)}.hero-footnote{gap:8px}.hero-footnote span{font-size:12px}.panel-description{min-height:145px}.panel-code pre{font-size:12px}.navigation{font-size:16px}.tags span{font-size:13px}.copy-feedback{line-height:1.6}}
+
+.project-screenshot{background:#e8eee5}.project-screenshot img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}.projects-empty{padding:32px;border:1px solid var(--line);border-radius:9px;font-size:16px;line-height:1.7;color:var(--muted)}
+
+.screenshot-pos{display:flex;align-items:center;justify-content:center;padding:18px;background:#f0dfd0}.screenshot-pos img{width:auto;height:100%;max-width:100%;object-fit:contain;border:5px solid #343830;border-radius:16px;box-shadow:12px 12px 28px #7b624922}

@@ -32,7 +32,7 @@ El build queda en `dist`. Firebase Hosting está configurado para publicar ese d
 - `public/Diego-Bercian-CV.pdf`: CV descargable.
 - `index.html`: título y metadatos.
 
-Los proyectos `planned` no se presentan como terminados y no llevan enlaces a repositorios inexistentes. Las imágenes de proyectos son ilustraciones CSS con datos ficticios. No son capturas de los sistemas privados de la empresa.
+Los proyectos `planned` no se presentan como terminados y no llevan enlaces a repositorios inexistentes. Las capturas de SuperKinal y las nuevas demos están en public/projects y usan datos sintéticos. Ventas Online conserva una vista conceptual en CSS. Ninguna imagen muestra sistemas privados de una empresa.
 
 ## Recorrido de comprobación
 
@@ -50,4 +50,4 @@ El 26 de noviembre de 2026 se aprobó implementar el portafolio, los tres proyec
 
 AWS queda aplazado. DocumentFlow debe funcionar con PostgreSQL y almacenamiento filesystem sin credenciales ni servicios cloud. El contenido del portafolio distingue proyectos planificados de resultados implementados.
 
-GitHub Actions ejecuta instalación limpia, lint, build y comprobación de assets, PDF y configuración de hosting. Esto no sustituye la revisión de las interacciones en navegador.
+GitHub Actions ejecuta instalación limpia, lint, build, comprobación de assets/PDF/hosting y pruebas Playwright en escritorio y móvil, incluidos filtros, casos, foco, contacto, copia de correo y descarga de CV.
